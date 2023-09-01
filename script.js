@@ -1,34 +1,56 @@
 const quiz = [
   {
-    question:
-      "Quel élément HTML est utilisé pour insérer un contenu JavaScript?",
-    choices: ["<js>", "<javascript>", "<scripting>", "<script>"],
-    answer: "<script>",
+      question: "Quelle balise HTML est utilisée pour créer un lien hypertexte ?",
+      choices: ["<a>", "<link>", "<href>", "<url>"],
+      answer: "<a>"
   },
   {
-    question:
-      "Quelle fonction JavaScript est utilisée pour afficher une boîte de dialogue?",
-    choices: ["msg()", "show()", "display()", "alert()"],
-    answer: "alert()",
+      question: "Quelle est la langue de programmation principalement utilisée pour créer des pages web dynamiques ?",
+      choices: ["JavaScript", "HTML", "CSS", "Python"],
+      answer: "JavaScript"
   },
   {
-    question:
-      "Quelle propriété CSS est utilisée pour changer la couleur d'arrière-plan?",
-    choices: ["color", "bgcolor", "background-color", "backgroundFill"],
-    answer: "background-color",
+      question: "Quelle est la méthode JavaScript utilisée pour afficher un message d'alerte dans une boîte de dialogue ?",
+      choices: ["alert()", "prompt()", "confirm()", "console.log()"],
+      answer: "alert()"
   },
   {
-    question: "Comment déclare-t-on une variable en JavaScript?",
-    choices: ["var name", "v name", "variable name", "declare name"],
-    answer: "var name",
+      question: "Quelle propriété CSS est utilisée pour définir la couleur de fond d'un élément HTML ?",
+      choices: ["color", "background-color", "text-color", "font-color"],
+      answer: "background-color"
   },
   {
-    question:
-      "Quel attribut est utilisé en HTML pour spécifier une feuille de style externe?",
-    choices: ["href", "rel", "type", "src"],
-    answer: "href",
+      question: "Quel est l'acronyme de 'Hypertext Markup Language' ?",
+      choices: ["HTML", "HTTP", "CSS", "URL"],
+      answer: "HTML"
   },
+  {
+      question: "Quelle balise HTML est utilisée pour définir une liste non ordonnée ?",
+      choices: ["<ul>", "<ol>", "<li>", "<dl>"],
+      answer: "<ul>"
+  },
+  {
+      question: "Quelle est la méthode JavaScript utilisée pour ajouter un élément à la fin d'un tableau ?",
+      choices: ["push()", "append()", "insert()", "add()"],
+      answer: "push()"
+  },
+  {
+      question: "Quelle balise HTML est utilisée pour créer un paragraphe ?",
+      choices: ["<p>", "<div>", "<span>", "<h1>"],
+      answer: "<p>"
+  },
+  {
+      question: "Quel sélecteur CSS est utilisé pour cibler tous les éléments HTML ?",
+      choices: ["*", "body", "#id", ".class"],
+      answer: "*"
+  },
+  {
+      question: "Quel est l'élément HTML utilisé pour créer un lien vers une feuille de style externe ?",
+      choices: ["<style>", "<link>", "<head>", "<meta>"],
+      answer: "<link>"
+  }
 ];
+
 
 let startSection = document.getElementById("start");
 let quizSection = document.getElementById("quiz");
