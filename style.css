@@ -101,6 +101,14 @@ main section button {
 main section button:hover {
     background-color: #4a8181;
 }
-li{
-    list-style-type: none;
+#timer{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 1rem 0;
+    padding: 0;
+    color: #e6ffff;
+}
+li {
+    list-style: none;
 }
