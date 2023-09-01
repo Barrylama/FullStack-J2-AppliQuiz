@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz web app</title>
+</head>
+<body>
+    <header>
+        <h1>Quiz Developpement web</h1>
+        <p>Repondez question du quiz en choisissant une parmi les response proposées</p>
+    </header>
+    <main>
+        <section id="start">
+            <button id="start-btn">Commencer</button>
+        </section>
+        <section id="quiz">
+            <h2 id="question">Quel est le language le plus populaire en programation</h2>
+            <ul id="choices">
+                <li>javascript</li>
+                <li>python</li>
+                <li>Java</li>
+                <li>PHP</li>
+            </ul>
+        </section>
+        <section id="result">
+            <h2>Votre Score</h2>
+            <p>Vous avez <span id="score">0</span> bonnes reponses sur <span id="total">0</span></p>
+            <button id="restart">Recommencer</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
