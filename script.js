@@ -53,14 +53,28 @@ function showQuestion() {
   question.innerHTML = quiz[index].question;
   let choices = document.getElementById("choices");
   choices.innerHTML = "";
+  let clicked = false;
   for (let i = 0; i < quiz[index].choices.length; i++) {
     let li = document.createElement("li");
     li.textContent = quiz[index].choices[i];
     choices.appendChild(li);
 
     li.addEventListener("click", function () {
+      if (clicked) {
+        return;
+      }
+      clicked = true;
+
+      let lies = choices.querySelectorAll("li");
+      lies.forEach(function (li) {
+        li.style.pointerEvents = "none";
+        li.style.cursor = "not-allowed";
+        if (li.textContent === quiz[index].answer) {
+          li.style.backgroundColor = "green";
+        }
+      });
+
       if (li.textContent === quiz[index].answer) {
-        li.style.backgroundColor = "green";
         score++;
       } else {
         li.style.backgroundColor = "red";
