@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Quiz web app</title>
 </head>
+
 <body>
     <header>
         <h1>Quiz Developpement web</h1>
@@ -28,10 +30,17 @@
         <section id="result">
             <h2>Votre Score</h2>
             <p>Vous avez <span id="score">0</span> bonnes reponses sur <span id="total">0</span></p>
+            <button id="show-summary">Voir le récapitulatif</button>
             <button id="restart">Recommencer</button>
         </section>
+        <section id="summary">
+            <h2>Récapitulatif du Quiz</h2>
+            <div id="summary-content"></div>
+        </section>
+          
     </main>
 
     <script src="script.js"></script>
 </body>
+
 </html>

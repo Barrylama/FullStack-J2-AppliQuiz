@@ -29,6 +29,54 @@ const quiz = [
     answer: "href",
   },
 ];
+// ...
+let userAnswers = new Array(quiz.length).fill(null);
+let showSummaryBtn = document.getElementById("show-summary");
+let summarySection = document.getElementById("summary");
+
+showSummaryBtn.style.display = "block"; // Cache le bouton de récapitulatif au début
+summarySection.style.display = "none"; // Cache la section de récapitulatif au début
+
+showSummaryBtn.addEventListener("click", function () {
+  // Affiche la section de récapitulatif
+  summarySection.style.display = "block";
+  // Masque le bouton de récapitulatif
+  showSummaryBtn.style.display = "none";
+  // Génère le récapitulatif
+  generateSummary();
+});
+
+function generateSummary() {
+  let summary = document.getElementById("summary-content");
+  summary.innerHTML = ""; // Vide le contenu précédent
+
+  for (let i = 0; i < quiz.length; i++) {
+    let questionItem = document.createElement("div");
+    let question = quiz[i].question;
+    let userAnswer = userAnswers[i]; // Récupère la réponse de l'utilisateur
+    let isCorrect = false; // Initialise la vérification de la réponse
+
+    // Vérifie si la réponse de l'utilisateur est correcte
+    if (userAnswer === quiz[i].answer) {
+      isCorrect = true;
+    }
+
+    // Ajoute la question au récapitulatif
+    if (isCorrect) {
+      questionItem.innerHTML = question + "<br>Félicitations votre réponse est correcte : " + userAnswer;
+      questionItem.style.color = "greenyellow";
+    } else {
+      questionItem.innerHTML = question + "<br>Réponse incorrecte : " + userAnswer + "<br>La bonne réponse etait : " + quiz[i].answer;
+      questionItem.style.color = "red";
+    }
+
+    summary.appendChild(questionItem);
+  }
+}
+
+
+// ...
+
 
 let startSection = document.getElementById("start");
 let quizSection = document.getElementById("quiz");
@@ -79,6 +127,10 @@ function showQuestion() {
       } else {
         li.style.backgroundColor = "red";
       }
+
+      // Met à jour la réponse de l'utilisateur dans userAnswers
+      userAnswers[index] = li.textContent;
+
       setTimeout(function () {
         index++;
         if (index < quiz.length) {
@@ -87,11 +139,13 @@ function showQuestion() {
           quizSection.style.display = "none";
           resultSection.style.display = "block";
           scoreElement.innerHTML = score;
+          generateSummary();
         }
       }, 1000);
     });
   }
 }
+
 
 startBtn.addEventListener("click", function () {
   startSection.style.display = "none";

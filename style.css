@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #274444;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -18,7 +18,7 @@ body{
     max-width: 1200px;
 }
 
-h1{
+h1 {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.5;
@@ -26,7 +26,8 @@ h1{
     padding: 0;
     color: #e6ffff;
 }
-p{
+
+p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -35,7 +36,7 @@ p{
     color: #e6ffff;
 }
 
-h2{
+h2 {
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.5;
@@ -44,7 +45,7 @@ h2{
     color: #e6ffff;
 }
 
-header{
+header {
     background-color: #376060;
     padding: 1rem;
     text-align: left;
@@ -52,11 +53,13 @@ header{
     max-width: 720px;
     margin: 0.5rem 0;
 }
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 main section {
     background-color: #416161;
     padding: 1rem;
@@ -65,6 +68,7 @@ main section {
     width: 100%;
     min-width: 500px;
 }
+
 main section h2 {
     margin-bottom: 1rem;
     font-weight: 700;
@@ -74,12 +78,14 @@ main section ul {
     margin-bottom: 1rem;
     font-weight: 400;
 }
+
 main section ul li {
     margin-bottom: 0.5rem;
     font-weight: 400;
     background-color: #274444;
     padding: 0.5rem;
 }
+
 main section ul li:hover {
     background-color: #4a8181;
     cursor: pointer;
@@ -101,14 +107,17 @@ main section button {
 main section button:hover {
     background-color: #4a8181;
 }
-#timer{
+
+#timer {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
     margin: 1rem 0;
     padding: 0;
     color: #e6ffff;
+    color:greenyellow
 }
+
 li {
     list-style: none;
 }
