@@ -30,7 +30,7 @@ const quiz = [
   },
 ];
 // ...
-let userAnswers = new Array(quiz.length).fill(null);
+let userAnswers = new Array(quiz.length).fill("");
 let showSummaryBtn = document.getElementById("show-summary");
 let summarySection = document.getElementById("summary");
 
